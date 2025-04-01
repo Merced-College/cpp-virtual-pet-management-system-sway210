@@ -7,6 +7,11 @@ Pet::Pet() : name("Unnamed"), species("Unknown"), age(0), hungerLevel(5) {}
 Pet::Pet(const std::string& name, const std::string& species, int age, int hungerLevel)
     : name(name), species(species), age(age), hungerLevel(hungerLevel) {}
 
+//deconstrutor
+Pet::~Pet(){
+    std::cout<<"Pet has been deconstructed"<<std::endl;
+}
+
 // Accessors
 std::string Pet::getName() const {
     return name;
@@ -58,4 +63,8 @@ void Pet::printInfo() const {
     std::cout << "Species: " << species << std::endl;
     std::cout << "Age: " << age << std::endl;
     std::cout << "Hunger Level: " << hungerLevel << "/10" << std::endl;
+}
+
+void Pet::makeSound() const {
+    std::cout << name << " makes an undefined noise.\n";
 }
