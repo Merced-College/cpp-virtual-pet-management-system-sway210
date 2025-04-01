@@ -16,6 +16,9 @@ public:
     Pet();
     Pet(const std::string& name, const std::string& species, int age, int hungerLevel);
 
+    //Destructor
+    virtual ~Pet();
+
     // Accessors (Getters)
     std::string getName() const;
     std::string getSpecies() const;
@@ -32,7 +35,10 @@ public:
     int compareTo(const Pet& other) const; // Returns -1, 0, or 1 based on name comparison
 
     // Output Function
-    void printInfo() const;
+    virtual void printInfo() const;
+
+    //Other functions
+    virtual void makeSound() const;
 };
 
 #endif
