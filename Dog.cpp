@@ -4,8 +4,8 @@
 Dog::Dog() : Pet(), breed("Unknown") {}
 
 // Constructor with parameters
-Dog::Dog(const std::string& name, const std::string& species, int age, int hungerLevel, const std::string& breed)
-    : Pet(name, species, age, hungerLevel), breed(breed) {}
+Dog::Dog(const std::string& name, int age, int hungerLevel, const std::string& breed)
+    : Pet(name, "Dog", age, hungerLevel), breed(breed) {}
 
 // Setter for breed
 void Dog::setBreed(const std::string& breed) {
